@@ -1,0 +1,69 @@
+/** {
+    border: 1px solid red;
+}*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+}
+.container {
+    width: 400px;
+    height: 700px;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+}
+.header {
+    height: 100px;
+    width: 100%;
+    color: #FFFFFF;
+    background: #4B4F55;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: "Helvetica";
+    padding: 40px 15px;
+}
+.footer {
+    height: 100px;
+    width: 100%;
+    background: white;
+    border-bottom-left-radius: 12px;
+    font-weight: bold;
+    border-bottom-right-radius: 12px;
+    box-sizing: border-box;
+    font-family: "Helvetica";
+    padding: 40px 15px;
+}
+.selector {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: "Helvetica";
+    padding: 40px 40px;
+    clear: both;
+    border-bottom: 1px solid #F0F0F0;
+}
+.text {
+    float: left;
+    font-weight: bold;
+}
+.number {
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+    padding: 10px;
+    float: right;
+}
+.selector:hover {
+    background: #6E757F;
+}
+.selector:hover > .number {
+    background: red;
+    color: white;
+    border: 1px solid black;
+    font-weight: bold;
+}
+.selector:hover > .text {
+    color: white;
+}
