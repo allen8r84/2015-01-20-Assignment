@@ -153,11 +153,26 @@ html, body {
 .remainCont > .cen {
     text-align: center;
 }
+.ytContain {
+    margin-top: 20px;
+    position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.ytContain > .ytVideo {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 .footContent {
     color: white;
     font-size: 10px;
     max-width: 930px;
     margin: 0 auto;
+    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -186,6 +201,7 @@ html, body {
     }
     .footContent {
         margin: 0 20px;
+        margin-bottom: 30px;
     }
 }
 @media screen and (max-width: 717px){
