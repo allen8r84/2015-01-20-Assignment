@@ -1,6 +1,6 @@
-* {
+/** {
     border: 1px solid red;
-}
+}*/
 html, body {
     width: 100%;
     min-width: 400px;
@@ -39,7 +39,7 @@ html, body {
 .mainBody > .menu {
     float: right;
 }
-.menu > .menCont {
+.footFlex2, .menu > .menCont {
     padding: 15px;
     display: flex;
     flex-direction: row;
@@ -55,16 +55,15 @@ html, body {
 .menCont > .text:active {
     color: #13A2D8;
 }
-.headNavBar > .text {
-    /*float: left;*/
+.footContent > .text, .headNavBar > .text {
     margin: 0 3px;
     line-height: 20px;
-    
 }
 .mainBody {
     height: 100%;
     max-width: 930px;
     margin: 20px auto;
+    margin-bottom: 0;
     padding: 29px;
     padding-bottom: 80px;
     background: #FFFFFF;
@@ -81,6 +80,23 @@ html, body {
 }
 .watermark {
     float: right;
+}
+.footContent {
+    color: white;
+    font-size: 10px;
+    max-width: 930px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-flow: space-between;
+    justify-content: flex-start;
+}
+.footFlex > .text {
+
+}
+.footFlex2 {
+    padding: 0;
 }
 @media screen and (max-width: 990px){
    .mainBody {
