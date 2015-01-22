@@ -7,6 +7,9 @@ html, body {
     margin: 0;
     background: #00589F;
 }
+.body {
+    height: auto;
+}
 /***** Clear Fix css*****/
 .mainImage:before, mainImage:after, .headContainer:before, .headContainer:after, .headNavBar:after, .headNavBar:before {
     content: "";
@@ -16,9 +19,6 @@ html, body {
     clear: both;
 }
 /************************/
-.body {
-    height: auto;
-}
 .headNavBar {
     display: flex;
     width: 100%;
@@ -63,7 +63,7 @@ html, body {
     height: 100%;
     max-width: 930px;
     margin: 20px auto;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     padding: 29px;
     padding-bottom: 80px;
     background: #FFFFFF;
@@ -73,13 +73,57 @@ html, body {
     background-repeat: no-repeat;
     background-position: right bottom;
 }
-.mainImage {
-    margin: 10px auto;
+.respChld, .mainImage {
+    margin: 5px auto;
     width: 100%;
     float: none;
 }
-.watermark {
-    float: right;
+.imageSelect {
+    display: flex;
+    margin: 5px auto;
+    flex-direction: row;
+    justify-content: center;
+}
+.selectBox, .current {
+    width: 22px;
+    height: 18px;
+    background: #b5b5b5;
+    margin: 1px;
+}
+.imageSelect >.current {
+    background: #7b7b7b; /*set a current color because I am not using an active selector to rotate through images. the homepage image is static in this proof of concept*/
+}
+.respBox {
+    margin-top: 10px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.boxChild {
+    box-sizing: border-box;
+    width: 33%;
+}
+.featureLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.featContain {
+    display: flex;
+    flex-direction: row;
+}
+.featArrow {
+    margin-left: 3px;
+}
+.smSelectBox, .smCurrent {
+    width: 14px;
+    height: 10px;
+    background: #b5b5b5;
+    margin: 1px;
+}
+.smCurrent {
+    background: #7b7b7b;
 }
 .footContent {
     color: white;
@@ -91,16 +135,13 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
 }
-.footFlex > .text {
-
-}
 .footFlex2 {
     padding: 0;
 }
 @media screen and (max-width: 990px){
    .mainBody {
         margin: 20px 20px;
-
+        margin-bottom: 5px;
     }
     .headContainer > .menu {
         float: left;
@@ -124,4 +165,15 @@ html, body {
         height: 60px;
         padding: 5px;
    }
+    .respBox {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .boxChild {
+        box-sizing: border-box;
+        width: 275px;
+        margin: 5px auto;
+    }
 }
