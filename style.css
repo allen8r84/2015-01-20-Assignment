@@ -94,8 +94,8 @@ html, body {
     background: #7b7b7b; /*set a current color because I am not using an active selector to rotate through images. the homepage image is static in this proof of concept*/
 }
 .respBox {
-    margin-top: 10px;
     margin: 5px auto;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -104,10 +104,22 @@ html, body {
     box-sizing: border-box;
     width: 33%;
 }
+.boxChild > .text {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 .featureLink {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:13px;
+    margin-left: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-weight: bold;
 }
 .featContain {
     display: flex;
