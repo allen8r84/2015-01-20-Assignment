@@ -1,69 +1,109 @@
-/** {
+* {
     border: 1px solid red;
-}*/
+}
 html, body {
     width: 100%;
-    height: 100%;
-    margin: 15px;
+    min-width: 400px;
+    margin: 0;
+    background: #00589F;
 }
-.container {
-    width: 400px;
-    height: 700px;
-    border: 1px solid #F0F0F0;
-    border-radius: 12px;
+/***** Clear Fix css*****/
+.mainImage:before, mainImage:after, .headContainer:before, .headContainer:after, .headNavBar:after, .headNavBar:before {
+    content: "";
+    display: table;
 }
-.header {
-    height: 100px;
-    width: 100%;
-    color: #FFFFFF;
-    background: #4B4F55;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    box-sizing: border-box;
-    font-weight: bold;
-    font-family: "Helvetica";
-    padding: 40px 15px;
-}
-.footer {
-    height: 100px;
-    width: 100%;
-    background: white;
-    border-bottom-left-radius: 12px;
-    font-weight: bold;
-    border-bottom-right-radius: 12px;
-    box-sizing: border-box;
-    font-family: "Helvetica";
-    padding: 40px 15px;
-}
-.selector {
-    width: 100%;
-    height: 100px;
-    box-sizing: border-box;
-    font-weight: bold;
-    font-family: "Helvetica";
-    padding: 40px 40px;
+.mainImage:after, .headNavBar:after, .headContainer:after {
     clear: both;
-    border-bottom: 1px solid #F0F0F0;
 }
-.text {
+/************************/
+.body {
+    height: auto;
+}
+.headNavBar {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    font-size: 10px;
+    background: #004E8E;
+    color: white;
+    padding:0 10px;
+    border-bottom: 1px solid #378CCD;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.logo {
     float: left;
-    font-weight: bold;
 }
-.number {
-    border: 1px solid #F0F0F0;
-    border-radius: 12px;
-    padding: 10px;
+.mainBody > .menu {
     float: right;
 }
-.selector:hover {
-    background: #6E757F;
+.menu > .menCont {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-.selector:hover > .number {
-    background: red;
-    color: white;
-    border: 1px solid black;
-    font-weight: bold;
+.menCont > .text {
+    color: #0063AB;
+    padding: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
 }
-.selector:hover > .text {
-    color: white;
+.menCont > .text:active {
+    color: #13A2D8;
+}
+.headNavBar > .text {
+    /*float: left;*/
+    margin: 0 3px;
+    line-height: 20px;
+    
+}
+.mainBody {
+    height: 100%;
+    max-width: 930px;
+    margin: 20px auto;
+    padding: 29px;
+    padding-bottom: 80px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 10px 1px;
+    background-image: url(http://www.slcdentalcenter.com/wp-content/themes/slcdental/images/watermark.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.mainImage {
+    margin: 10px auto;
+    width: 100%;
+    float: none;
+}
+.watermark {
+    float: right;
+}
+@media screen and (max-width: 990px){
+   .mainBody {
+        margin: 20px 20px;
+
+    }
+    .headContainer > .menu {
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+    .menCont > .text {
+        padding: 8px;
+        font-size: 15px;
+    }
+    .mainBody > .mainImage {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+@media screen and (max-width: 717px){
+    .headNavBar {
+        height: 60px;
+        padding: 5px;
+   }
 }
